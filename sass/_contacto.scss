@@ -1,0 +1,26 @@
+/*MAIN CONTACTO*/
+.cajaMadreContacto{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 50px;
+}
+
+.formContacto{
+    display: flex;
+    flex-direction: column;
+}
+
+.cajaLinkOficial{
+    padding-top: 70px;
+}
+
+.linkContacto{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    color: #2f462f;
+    text-decoration: non;
+
+}
+

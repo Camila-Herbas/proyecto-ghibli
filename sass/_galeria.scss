@@ -1,0 +1,15 @@
+
+/******MAIN GALERIA*******/
+.cajaMadreGaleria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 5px solid slategray;
+}
+
+.imgGaleria{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200px;
+}
