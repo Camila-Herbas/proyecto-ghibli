@@ -1,40 +1,8 @@
-@import "reset-general";
-@import "index";
-@import "peliculas";
-@import "legado";
-@import "galeria";
-@import "contacto";
-
-
-@media (max-width:576px){
-    /*INDEX*/ /*ARREGLAR CENTRAR EL TEXTO*/
-    #bodyIndex{
-        background-image: url(../image/fondo-index-mobile.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100vw;
-    
-}
-
-    .textoBienvenida{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 50px;
-        padding-left: 0%;
-}
-
-    /*CONTACTO*/
-    .cajaMadreContacto{
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 200px
-        }
-
-        .cajaForm{
-            padding: 40px;
-            border-top: 2px solid black;
-        }
-}
+@use "reset-general";
+@use "index";
+@use "peliculas";
+@use "legado";
+@use "galeria";
+@use "contacto";
+@use "footer";
+@use "responsive"

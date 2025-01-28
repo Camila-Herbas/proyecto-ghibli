@@ -44,15 +44,65 @@ main {
 }
 
 /*MAIN PELICULAS*/
-/**CARRUSEL ARREGLAR*/
-#carouselExampleCaptions {
-  margin: auto;
-  padding: 100px;
+.tituloPelis {
   display: flex;
-  flex-direction: row;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 30px;
+}
+
+.cajaMadrePeli {
+  display: flex;
+  padding: 1px;
+  margin: 60px;
+  gap: 100px;
+}
+.cajaMadrePeli .peli {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border: 5px ridge #afb87f;
+}
+.cajaMadrePeli .peli img {
+  padding: 10px;
+}
+
+.cajaMadrePeli2 {
+  display: flex;
+  margin: 100px;
+  padding: 5px;
+  gap: 20px;
+  border: 5px ridge #afb87f;
+}
+
+.subtituloMasPelis {
+  padding-left: 128px;
+}
+
+/*MAS PELICULAS*/
+.masPelis {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  gap: 20px;
 }
 
 /*MAIN LEGADO*/
+.tituloLegado {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 30px;
+}
+
 .cajaFundadores {
   display: flex;
   flex-direction: column;
@@ -61,7 +111,7 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   row-gap: 20px;
-  margin: 100px;
+  margin: 0px 100px 0px 100px;
 }
 
 .hayaoMiyazaki {
@@ -78,34 +128,73 @@ main {
 
 .textoHonorarios {
   text-align: center;
+  padding: 50px 100px 10px 100px;
 }
 
 .imgDirectores {
   display: flex;
   flex-direction: row;
-  margin: 30px;
-  margin: 100px;
+  margin: 30px 100px 80px 100px;
 }
-
-.imgDirectores img {
+.imgDirectores .imgD {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.imgDirectores .imgD img {
   width: 120px;
   border: 2px solid #2f462f;
   border-radius: 90px;
+  align-self: center;
 }
 
 /******MAIN GALERIA*******/
-.cajaMadreGaleria {
+.textoGaleria {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 5px solid slategray;
-}
-
-.imgGaleria {
-  display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 5px;
-  width: 200px;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 30px;
+}
+
+.cajaMadreGaleria {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 190px 10px 190px;
+  border: 5px ridge black;
+}
+.cajaMadreGaleria .imgGaleria {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 15px;
+}
+
+/**LAYOUTS**/
+.cajaMadreLayouts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 60px 40px 60px 40px;
+}
+.cajaMadreLayouts .textoLayouts {
+  padding: 60px;
+  max-width: 40%;
+  text-align: center;
+}
+.cajaMadreLayouts .cajaImgLayouts {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.cajaMadreLayouts .cajaImgLayouts .imgLayouts {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /*MAIN CONTACTO*/
@@ -133,8 +222,28 @@ main {
   text-decoration: non;
 }
 
+/*FOOTER GENERAL*/
+footer {
+  margin-top: auto;
+  width: 100%;
+  font-family: "sour gummy";
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  color: white;
+  background-color: #3b3630;
+}
+
+.sectionPaginaOficial a {
+  color: #92C5C3;
+  padding: 20px;
+  border: 3px ridge #726454;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+
 @media (max-width: 576px) {
-  /*INDEX*/ /*ARREGLAR CENTRAR EL TEXTO*/
   #bodyIndex {
     background-image: url(../image/fondo-index-mobile.jpeg);
     background-size: cover;
@@ -159,6 +268,131 @@ main {
   .cajaForm {
     padding: 40px;
     border-top: 2px solid black;
+  }
+}
+@media (max-width: 768px) {
+  .cajaMadrePeli {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 30px;
+    gap: 30px;
+    justify-content: center;
+  }
+  .cajaMadrePeli .peli {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 3px ridge #afb87f;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  /*CAJA MADRE 2*/
+  .cajaMadrePeli2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 10px;
+    gap: 20px;
+    border: 3px ridge #afb87f;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  /*MAS PELICULAS*/
+  .masPelis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+    gap: 15px;
+  }
+}
+/*RESPONSIVE DE 576PX*/
+@media (max-width: 576px) {
+  .cajaMadrePeli {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 30px;
+    gap: 30px;
+    justify-content: center;
+  }
+  .cajaMadrePeli .peli {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 3px ridge #afb87f;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  /*CAJA MADRE 2*/
+  .cajaMadrePeli2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 10px;
+    gap: 20px;
+    border: 3px ridge #afb87f;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  /*MAS PELICULAS*/
+  .masPelis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .cajaFundadores {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin: 5px;
+    padding: 20px;
+  }
+  .cajaFundadores .hayaoMiyazaki, .cajaFundadores .isaoTakahata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: justify;
+  }
+  .textoHonorarios {
+    padding: 30px;
+  }
+  .imgDirectores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .cajaFundadores {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin: 5px;
+    padding: 20px;
+  }
+  .cajaFundadores .hayaoMiyazaki, .cajaFundadores .isaoTakahata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: justify;
+  }
+  .textoHonorarios {
+    padding: 30px;
+  }
+  .imgDirectores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 

@@ -1,10 +1,48 @@
 
 /*MAIN PELICULAS*/
-/**CARRUSEL ARREGLAR*/
-#carouselExampleCaptions{
-    margin: auto;
-    padding: 100px;
+.tituloPelis {
     display: flex;
-    flex-direction: row;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 30px;
 }
 
+.cajaMadrePeli {
+    display: flex;
+    padding: 1px;
+    margin: 60px;
+    gap: 100px;
+    .peli {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border: 5px ridge #afb87f;
+        img {
+            padding: 10px;
+        }
+    }
+}
+
+.cajaMadrePeli2 {
+    display: flex;
+    margin: 100px;
+    padding: 5px;
+    gap: 20px;
+    border: 5px ridge #afb87f;
+}
+
+.subtituloMasPelis {
+    padding-left: 128px;
+}
+
+/*MAS PELICULAS*/
+.masPelis {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    gap: 20px;
+}
