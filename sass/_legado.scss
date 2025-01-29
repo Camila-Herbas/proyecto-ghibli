@@ -1,3 +1,27 @@
+/*ANIMACIONES-KEY*/
+@-webkit-keyframes scale-up-center {
+    0% {
+    -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+    -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+    @keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+
 /*MAIN LEGADO*/
 .tituloLegado {
     display: flex;
@@ -13,8 +37,8 @@
 .cajaFundadores{
     display: flex;
     flex-direction: column; 
-    border-top: 5px solid #2f462f;
-    border-bottom: 5px solid #2f462f;
+    border: 5px solid #2f462f;
+    border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     row-gap: 20px ;
@@ -25,12 +49,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    img {
+        border-radius: 20px;
+        animation-name: scale-up-center;
+        -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+	    animation: scale-up-center 0.3s
+        cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+        }
+    p {
+        display: flex;
+        text-align: justify;
+        padding: 20px;
+        
+    }
 }
 
 .isaoTakahata{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    img {
+        border-radius: 20px;
+        animation-name: scale-up-center;
+        -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+	    animation: scale-up-center 0.3s
+        cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+    }
+    p {
+        display: flex;
+        text-align: justify;
+        padding: 20px;
+        
+    }
 }
 
 .textoHonorarios{
@@ -38,20 +90,20 @@
     padding: 50px 100px 10px 100px;
 }
 
-.imgDirectores{
+.imgDirectores {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 30px 100px 80px 100px;
     .imgD {
         display: flex;
         flex-direction: column;
         text-align: center;
-            img {
-                width: 120px;
-                border: 2px solid #2f462f;
-                border-radius: 90px;
-                align-self: center;
-            }
+        margin: 20px;
+        img {
+            width: 120px;
+            border: 2px solid #2f462f;
+            border-radius: 90px;
+            align-self: center;
         }
+    }
 }
-

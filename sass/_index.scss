@@ -1,3 +1,31 @@
+/*ANIMACION-TEXTO-BIENVENIDA*/
+@-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
 /*ESTILOS BODY-INDEX*/
 #bodyIndex{
     background-image: url(../image/background-index.jpeg);
@@ -11,4 +39,8 @@
     text-align: left;
     padding-top: 55px;
     padding-left: 40%;
+    animation-name: focus-in-contract;
+    -webkit-animation: focus-in-expand 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+	        animation: focus-in-expand 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+            transition: all 2s ease;
 }

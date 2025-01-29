@@ -29,6 +29,33 @@ main {
   min-height: 100vh;
 }
 
+/*ANIMACION-TEXTO-BIENVENIDA*/
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 /*ESTILOS BODY-INDEX*/
 #bodyIndex {
   background-image: url(../image/background-index.jpeg);
@@ -41,6 +68,10 @@ main {
   text-align: left;
   padding-top: 55px;
   padding-left: 40%;
+  animation-name: focus-in-contract;
+  -webkit-animation: focus-in-expand 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: focus-in-expand 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 2s ease;
 }
 
 /*MAIN PELICULAS*/
@@ -53,6 +84,8 @@ main {
   padding-left: 100px;
   padding-right: 100px;
   margin: 30px;
+  transform: translate Y(-20px);
+  transition: 2s;
 }
 
 .cajaMadrePeli {
@@ -90,7 +123,39 @@ main {
   margin: 40px;
   gap: 20px;
 }
+.masPelis p {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+.masPelis img:hover {
+  padding: 10px;
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.473);
+}
 
+/*ANIMACIONES-KEYBOARDS*/
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 /*MAIN LEGADO*/
 .tituloLegado {
   display: flex;
@@ -106,8 +171,8 @@ main {
 .cajaFundadores {
   display: flex;
   flex-direction: column;
-  border-top: 5px solid #2f462f;
-  border-bottom: 5px solid #2f462f;
+  border: 5px solid #2f462f;
+  border-radius: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   row-gap: 20px;
@@ -118,12 +183,36 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+}
+.hayaoMiyazaki img {
+  border-radius: 20px;
+  animation-name: scale-up-center;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hayaoMiyazaki p {
+  display: flex;
+  text-align: justify;
+  padding: 20px;
 }
 
 .isaoTakahata {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+}
+.isaoTakahata img {
+  border-radius: 20px;
+  animation-name: scale-up-center;
+  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.isaoTakahata p {
+  display: flex;
+  text-align: justify;
+  padding: 20px;
 }
 
 .textoHonorarios {
@@ -133,13 +222,14 @@ main {
 
 .imgDirectores {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 30px 100px 80px 100px;
 }
 .imgDirectores .imgD {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 20px;
 }
 .imgDirectores .imgD img {
   width: 120px;
@@ -148,6 +238,67 @@ main {
   align-self: center;
 }
 
+/*ANIMACION CAJA-MADRE-GALERIA*/
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
 /******MAIN GALERIA*******/
 .textoGaleria {
   display: flex;
@@ -165,6 +316,9 @@ main {
   flex-direction: column;
   margin: 10px 190px 10px 190px;
   border: 5px ridge black;
+  animation-name: jello-horizontal;
+  -webkit-animation: jello-horizontal 0.8s;
+  animation: jello-horizontal 0.8s;
 }
 .cajaMadreGaleria .imgGaleria {
   display: flex;
@@ -183,7 +337,7 @@ main {
 .cajaMadreLayouts .textoLayouts {
   padding: 60px;
   max-width: 40%;
-  text-align: center;
+  text-align: justify;
 }
 .cajaMadreLayouts .cajaImgLayouts {
   display: flex;
@@ -288,26 +442,28 @@ footer {
     border-radius: 10px;
     padding: 10px;
   }
-  /*CAJA MADRE 2*/
-  .cajaMadrePeli2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px;
-    padding: 10px;
-    gap: 20px;
-    border: 3px ridge #afb87f;
-    border-radius: 10px;
-    justify-content: center;
-  }
-  /*MAS PELICULAS*/
-  .masPelis {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 30px;
-    gap: 15px;
-  }
 }
+/*CAJA MADRE 2*/
+.cajaMadrePeli2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  padding: 10px;
+  gap: 20px;
+  border: 3px ridge #afb87f;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+/*MAS PELICULAS*/
+.masPelis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+  gap: 15px;
+}
+
 /*RESPONSIVE DE 576PX*/
 @media (max-width: 576px) {
   .cajaMadrePeli {
@@ -377,7 +533,6 @@ footer {
     flex-direction: column;
     row-gap: 20px;
     margin: 5px;
-    padding: 20px;
   }
   .cajaFundadores .hayaoMiyazaki, .cajaFundadores .isaoTakahata {
     display: flex;
@@ -393,6 +548,64 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+  }
+}
+/*MAIN GALERIA RESPONSIVE*/
+/*RESPONSIVE DE 768PX */
+@media (max-width: 768px) {
+  .textoGaleria {
+    padding: 0px 0px 0px 0px;
+  }
+  .cajaMadreGaleria {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .cajaMadreGaleria img {
+    width: 200px;
+  }
+  .cajaMadreLayouts {
+    display: flex;
+    flex-direction: column;
+  }
+  .cajaMadreLayouts .textoLayouts {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    max-width: none;
+  }
+  .cajaMadreLayouts .cajaImgLayouts {
+    display: flex;
+    width: 100%;
+  }
+}
+/*RESPONSIVE GALERIA 576PX*/
+@media (max-width: 576px) {
+  .textoGaleria {
+    padding: 0px 0px 0px 0px;
+  }
+  .cajaMadreGaleria {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .cajaMadreGaleria img {
+    width: 160px;
+  }
+  .cajaMadreLayouts {
+    display: flex;
+    flex-direction: column;
+  }
+  .cajaMadreLayouts .textoLayouts {
+    text-align: center;
+    max-width: none;
+  }
+  .cajaMadreLayouts .cajaImgLayouts {
+    display: flex;
+    width: 100%;
   }
 }
 

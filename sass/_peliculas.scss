@@ -1,4 +1,3 @@
-
 /*MAIN PELICULAS*/
 .tituloPelis {
     display: flex;
@@ -9,6 +8,8 @@
     padding-left: 100px;
     padding-right: 100px;
     margin: 30px;
+    transform: translate Y(-20px);
+    transition: 2s;
 }
 
 .cajaMadrePeli {
@@ -45,4 +46,15 @@
     justify-content: center;
     margin: 40px;
     gap: 20px;
+    p {
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+    }
+    img:hover {
+        padding: 10px;
+        transform: scale(1.05);
+        transition: 0.3s;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.473);
+    }
 }
