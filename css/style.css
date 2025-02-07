@@ -135,7 +135,7 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.473);
 }
 
-/*ANIMACIONES-KEYBOARDS*/
+/*ANIMACIONES-KEY*/
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
@@ -163,8 +163,8 @@ main {
   flex-direction: column;
   gap: 5px;
   text-align: center;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin: 30px;
 }
 
