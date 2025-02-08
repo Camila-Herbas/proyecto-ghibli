@@ -29,6 +29,11 @@ main {
   min-height: 100vh;
 }
 
+/*PARRAFO GENERAL*/
+p {
+  font-size: large;
+}
+
 /*ANIMACION-TEXTO-BIENVENIDA*/
 @-webkit-keyframes focus-in-expand {
   0% {
@@ -397,6 +402,11 @@ footer {
   justify-content: space-around;
 }
 
+@media (max-width: 576px) {
+  p {
+    font-size: large;
+  }
+}
 @media (max-width: 576px) {
   #bodyIndex {
     background-image: url(../image/fondo-index-mobile.jpeg);
